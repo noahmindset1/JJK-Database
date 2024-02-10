@@ -16,3 +16,7 @@ A unofficial JSON Database for JJK!
 |-------------------------|------------------------------------------------------------------|
 | `charas.json`           | Has character data.                                              |
 | `jjk_scraper.py`        | Will scrape character data.                                      |
+
+
+How to help?
+star this repo, Fork it etc
