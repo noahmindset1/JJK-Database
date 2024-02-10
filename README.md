@@ -14,5 +14,5 @@ A unofficial JSON Database for JJK!
 
 | file                    | Description                                                      |
 |-------------------------|------------------------------------------------------------------|
-|charas.json              | Has character data.                                              |
+| `charas.json`           | Has character data.                                              |
 | `jjk_scraper.py`        | Will scrape character data.                                      |
