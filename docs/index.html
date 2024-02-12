@@ -4,7 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jujutsu Kaisen Documentation</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --main-bg-color: #282a36;
+            --text-color: #fafafa;
+            --secondary-bg-color: #242631;
+            --border-radius: 15px;
+        }
+
+        body, .content-wrapper {
+            background-color: var(--main-bg-color);
+            color: var(--text-color);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: var(--secondary-bg-color);
+            padding: 20px;
+            text-align: center;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: var(--secondary-bg-color);
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+        }
+
+        p {
+            margin: 0;
+        }
+
+        section {
+            background-color: var(--secondary-bg-color);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+        }
+
+        code {
+            background-color: #44475a;
+            padding: 2px 4px;
+            border-radius: 4px;
+            color: #bd93f9;
+            font-family: monospace;
+        }
+    </style>
 </head>
 <body>
     <div class="content-wrapper">
@@ -13,7 +69,15 @@
         </header>
         <main>
             <section id="content">
-                <?php include 'installdb.md'; ?>
+                <h2>Install Database</h2>
+                <p>To install the database for Jujutsu Kaisen, follow these steps:</p>
+                <ol>
+                    <li>Download the database SQL file from <a href="https://github.com/noahmindset1/JJK-Database/releases/tag/jjk">here</a>.</li>
+                    <li>Open your MySQL client.</li>
+                    <li>Create a new database named <code>jujutsu_kaisen</code>.</li>
+                    <li>Import the SQL file into the <code>jujutsu_kaisen</code> database.</li>
+                    <li>The database is now installed and ready to use.</li>
+                </ol>
             </section>
         </main>
         <footer>
