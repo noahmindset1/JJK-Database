@@ -19,10 +19,10 @@ git clone https://github.com/noahmindset1/JJK-Database.git
 
 | file                    | Description                                                      |
 |-------------------------|------------------------------------------------------------------|
-| `charas.json`           | Has character data.                                              |
+| `datas.json`            | Has all data.                                                    |
 | `jjk_scraper.py`        | Will scrape character data.                                      |
 | `make.py`               | Will scrape character data.                                      |
-| `databbase.db`          | the database file.                                               |
+| `database.db`           | the database file.                                               |
 
 How to help?
 star this repo, Fork it etc
