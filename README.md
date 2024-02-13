@@ -13,7 +13,7 @@ git clone https://github.com/noahmindset1/JJK-Database.git
 - [x] extra json data for episodes and other stuff
 - [x] better character info
 - [x] character stats
-- [ ] api requests/website
+- [x] api requests/website
 
 ### current stuff
 
