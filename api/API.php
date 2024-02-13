@@ -5,7 +5,7 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
 // Check if the file exists
-if (!file_exists("jjk.db")) {
+if (!file_exists("db.db")) {
     http_response_code(404);
     echo json_encode(array("message" => "Database file not found."));
     exit;
@@ -20,11 +20,19 @@ try {
     exit;
 }
 
-// Query to select all data from a table named 'your_table_name'
-$query = "SELECT * FROM your_table_name";
+// Parameters for pagination
+$page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
+$recordsPerPage = 10;
+$offset = ($page - 1) * $recordsPerPage;
+
+// Query to select data from a table named 'your_table_name' with pagination
+$query = "SELECT * FROM your_table_name LIMIT :limit OFFSET :offset";
+$stmt = $db->prepare($query);
+$stmt->bindValue(':limit', $recordsPerPage, SQLITE3_INTEGER);
+$stmt->bindValue(':offset', $offset, SQLITE3_INTEGER);
 
 // Execute the query
-$result = $db->query($query);
+$result = $stmt->execute();
 
 // Check if there are results
 if (!$result) {
@@ -39,10 +47,25 @@ while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
     $data[] = $row;
 }
 
+// Count total records
+$totalQuery = "SELECT COUNT(*) as total FROM your_table_name";
+$totalResult = $db->querySingle($totalQuery);
+$totalPages = ceil($totalResult / $recordsPerPage);
+
 // Close database connection
 $db->close();
 
-// Send JSON response
-echo json_encode($data);
-?>
+// Response data
+$response = array(
+    "data" => $data,
+    "pagination" => array(
+        "page" => $page,
+        "totalPages" => $totalPages,
+        "recordsPerPage" => $recordsPerPage,
+        "totalRecords" => $totalResult
+    )
+);
 
+// Send JSON response
+echo json_encode($response);
+?>
