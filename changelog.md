@@ -5,3 +5,9 @@
 -----------------------------------------------------------------
   Released the db file in releases!
 
+
+# V1.0.3
+- Docs website
+- working on a php file to read the db file
+- adding more info in the next version
+-----------------------------------------------------------------
