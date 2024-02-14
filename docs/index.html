@@ -138,6 +138,46 @@
                 transform: scale(1.1);
             }
         }
+
+        .button {
+            background-color: #8be9fd;
+            color: #282a36;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #6272a4;
+        }
+
+        .animated-button {
+            animation: rotate 1s infinite linear;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .info-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info-section img {
+            max-width: 200px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
     </style>
 </head>
 <body>
@@ -158,13 +198,25 @@
                 </ol>
             </section>
             <section id="more-info">
-                <h2>More Information</h2>
-                <p>Jujutsu Kaisen is a popular Japanese manga series written and illustrated by Gege Akutami. It follows the story of Yuji Itadori, a high school student with impressive physical abilities who joins a secret organization of sorcerers to defeat curses.</p>
-                <p>The manga has received widespread acclaim for its unique characters, engaging storylines, and stunning artwork.</p>
-                <p>For more details, you can visit the <a class="animated-link" href="https://en.wikipedia.org/wiki/Jujutsu_Kaisen">Wikipedia page</a> or the official <a class="animated-link" href="https://www.shonenjump.com/j/rensai/jujutsushin/">Shonen Jump website</a>.</p>
+                <div class="info-section">
+                    <div>
+                        <h2>More Information</h2>
+                        <p>Jujutsu Kaisen is a popular Japanese manga series written and illustrated by Gege Akutami. It follows the story of Yuji Itadori, a high school student with impressive physical abilities who joins a secret organization of sorcerers to defeat curses.</p>
+                        <p>The manga has received widespread acclaim for its unique characters, engaging storylines, and stunning artwork.</p>
+                        <p>For more details, you can visit the <a class="animated-link" href="https://en.wikipedia.org/wiki/Jujutsu_Kaisen">Wikipedia page</a> or the official <a class="animated-link" href="https://www.shonenjump.com/j/rensai/jujutsushin/">Shonen Jump website</a>.</p>
+                    </div>
+                    <img src="jujutsu_kaisen_cover.jpg" alt="Jujutsu Kaisen Cover">
+                </div>
+            </section>
+            <section id="about-author">
+                <h2>About the Author</h2>
+                <p>The author of Jujutsu Kaisen, Gege Akutami, is known for their unique storytelling and captivating art style. Akutami-sensei debuted as a manga artist in 2017 with Jujutsu Kaisen being their first serialized work.</p>
+                <p>Akutami-sensei draws inspiration from various sources, including traditional Japanese folklore and contemporary urban legends, to create the rich world of Jujutsu Kaisen.</p>
+                <p>Follow Gege Akutami on <a class="animated-link" href="https://twitter.com/gegeakutami">Twitter</a> for updates and insights into their creative process.</p>
             </section>
         </main>
         <footer>
+            <button class="button animated-button">Contact Us</button>
             <p>&copy; 2024 Jujutsu Kaisen</p>
         </footer>
     </div>
