@@ -9,17 +9,17 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #282a36;
-            color: #fafafa;
+            background-color: #f0f0f0;
+            color: #333;
         }
 
         .content-wrapper {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
-            background-color: #242631;
+            background-color: #fff;
             border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             animation: fadeIn 1s ease-in-out;
         }
 
@@ -64,7 +64,7 @@
         }
 
         section {
-            background-color: #44475a;
+            background-color: #f8f8f8;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -83,8 +83,13 @@
         }
 
         h2 {
-            color: #ff79c6;
+            color: #333;
             margin-top: 0;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 15px;
         }
 
         ol {
@@ -93,6 +98,7 @@
 
         li {
             margin-bottom: 10px;
+            color: #777;
         }
 
         a {
@@ -105,16 +111,16 @@
         }
 
         code {
-            background-color: #6272a4;
+            background-color: #f0f0f0;
             padding: 2px 4px;
             border-radius: 4px;
-            color: #ff79c6;
+            color: #bd93f9;
             font-family: monospace;
         }
 
         footer {
             background-color: #44475a;
-            padding: 10px 20px;
+            padding: 20px;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
@@ -126,7 +132,33 @@
             color: #bd93f9;
         }
 
-        .animated-link {
+        .button {
+            background-color: #6272a4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #44475a;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .button-container .button {
+            flex: 1;
+            margin: 0 5px;
+        }
+
+        .animated-button {
             animation: pulse 1.5s infinite alternate;
         }
 
@@ -137,46 +169,6 @@
             to {
                 transform: scale(1.1);
             }
-        }
-
-        .button {
-            background-color: #8be9fd;
-            color: #282a36;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #6272a4;
-        }
-
-        .animated-button {
-            animation: rotate 1s infinite linear;
-        }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        .info-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .info-section img {
-            max-width: 200px;
-            border-radius: 10px;
-            margin-right: 20px;
         }
     </style>
 </head>
@@ -190,7 +182,7 @@
                 <h2>Install Database</h2>
                 <p>To install the database for Jujutsu Kaisen, follow these steps:</p>
                 <ol>
-                    <li>Download the database SQL file from <a class="animated-link" href="https://github.com/noahmindset1/JJK-Database/releases/tag/jjk">here</a>.</li>
+                    <li>Download the database SQL file from <a href="https://github.com/noahmindset1/JJK-Database/releases/tag/jjk">here</a>.</li>
                     <li>Open your MySQL client.</li>
                     <li>Create a new database named <code>jujutsu_kaisen</code>.</li>
                     <li>Import the SQL file into the <code>jujutsu_kaisen</code> database.</li>
@@ -198,26 +190,18 @@
                 </ol>
             </section>
             <section id="more-info">
-                <div class="info-section">
-                    <div>
-                        <h2>More Information</h2>
-                        <p>Jujutsu Kaisen is a popular Japanese manga series written and illustrated by Gege Akutami. It follows the story of Yuji Itadori, a high school student with impressive physical abilities who joins a secret organization of sorcerers to defeat curses.</p>
-                        <p>The manga has received widespread acclaim for its unique characters, engaging storylines, and stunning artwork.</p>
-                        <p>For more details, you can visit the <a class="animated-link" href="https://en.wikipedia.org/wiki/Jujutsu_Kaisen">Wikipedia page</a> or the official <a class="animated-link" href="https://www.shonenjump.com/j/rensai/jujutsushin/">Shonen Jump website</a>.</p>
-                    </div>
-                    <img src="jujutsu_kaisen_cover.jpg" alt="Jujutsu Kaisen Cover">
-                </div>
-            </section>
-            <section id="about-author">
-                <h2>About the Author</h2>
-                <p>The author of Jujutsu Kaisen, Gege Akutami, is known for their unique storytelling and captivating art style. Akutami-sensei debuted as a manga artist in 2017 with Jujutsu Kaisen being their first serialized work.</p>
-                <p>Akutami-sensei draws inspiration from various sources, including traditional Japanese folklore and contemporary urban legends, to create the rich world of Jujutsu Kaisen.</p>
-                <p>Follow Gege Akutami on <a class="animated-link" href="https://twitter.com/gegeakutami">Twitter</a> for updates and insights into their creative process.</p>
+                <h2>More Information</h2>
+                <p>Jujutsu Kaisen is a popular Japanese manga series written and illustrated by Gege Akutami. It follows the story of Yuji Itadori, a high school student with impressive physical abilities who joins a secret organization of sorcerers to defeat curses.</p>
+                <p>The manga has received widespread acclaim for its unique characters, engaging storylines, and stunning artwork.</p>
+                <p>For more details, you can visit the <a href="https://en.wikipedia.org/wiki/Jujutsu_Kaisen">Wikipedia page</a> or the official <a href="https://www.shonenjump.com/j/rensai/jujutsushin/">Shonen Jump website</a>.</p>
             </section>
         </main>
         <footer>
-            <button class="button animated-button">Contact Us</button>
-            <p>&copy; 2024 Jujutsu Kaisen</p>
+            <div class="button-container">
+                <a href="https://en.wikipedia.org/wiki/Jujutsu_Kaisen" class="button animated-button">Wiki</a>
+                <a href="https://github.com/noahmindset1/JJK-Database/blob/main/data/datas.json" class="button animated-button">JSON Database</a>
+            </div>
+            <p>&copy; 2024 Jujutsu Kaisen | made by mindset</p>
         </footer>
     </div>
 </body>
