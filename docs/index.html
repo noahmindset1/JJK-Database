@@ -9,15 +9,15 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: #282a36;
+            color: #fafafa;
         }
 
         .content-wrapper {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #44475a;
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             animation: fadeIn 1s ease-in-out;
@@ -33,7 +33,7 @@
         }
 
         header {
-            background-color: #44475a;
+            background-color: #6272a4;
             padding: 20px;
             text-align: center;
             border-top-left-radius: 15px;
@@ -64,7 +64,7 @@
         }
 
         section {
-            background-color: #f8f8f8;
+            background-color: #6272a4;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -83,12 +83,12 @@
         }
 
         h2 {
-            color: #333;
+            color: #ff79c6;
             margin-top: 0;
         }
 
         p {
-            color: #555;
+            color: #fff;
             margin-bottom: 15px;
         }
 
@@ -98,7 +98,7 @@
 
         li {
             margin-bottom: 10px;
-            color: #777;
+            color: #ccc;
         }
 
         a {
@@ -111,7 +111,7 @@
         }
 
         code {
-            background-color: #f0f0f0;
+            background-color: #44475a;
             padding: 2px 4px;
             border-radius: 4px;
             color: #bd93f9;
@@ -119,7 +119,7 @@
         }
 
         footer {
-            background-color: #44475a;
+            background-color: #6272a4;
             padding: 20px;
             text-align: center;
             border-bottom-left-radius: 15px;
@@ -133,8 +133,8 @@
         }
 
         .button {
-            background-color: #6272a4;
-            color: #fff;
+            background-color: #8be9fd;
+            color: #282a36;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
@@ -144,7 +144,7 @@
         }
 
         .button:hover {
-            background-color: #44475a;
+            background-color: #6272a4;
         }
 
         .button-container {
@@ -156,19 +156,11 @@
         .button-container .button {
             flex: 1;
             margin: 0 5px;
+            transition: transform 0.3s ease;
         }
 
-        .animated-button {
-            animation: pulse 1.5s infinite alternate;
-        }
-
-        @keyframes pulse {
-            from {
-                transform: scale(1);
-            }
-            to {
-                transform: scale(1.1);
-            }
+        .button-container .button:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -198,10 +190,10 @@
         </main>
         <footer>
             <div class="button-container">
-                <a href="https://en.wikipedia.org/wiki/Jujutsu_Kaisen" class="button animated-button">Wiki</a>
-                <a href="https://github.com/noahmindset1/JJK-Database/blob/main/data/datas.json" class="button animated-button">JSON Database</a>
+                <a href="https://en.wikipedia.org/wiki/Jujutsu_Kaisen" class="button">Wiki</a>
+                <a href="https://github.com/noahmindset1/JJK-Database/blob/main/data/datas.json" class="button">JSON Database</a>
             </div>
-            <p>&copy; 2024 Jujutsu Kaisen | made by mindset</p>
+            <p>&copy; 2024 Jujutsu Kaisen</p>
         </footer>
     </div>
 </body>
